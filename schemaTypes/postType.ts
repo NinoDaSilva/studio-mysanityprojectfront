@@ -1,9 +1,15 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 export const postType = defineType({
   name: 'post',
   title: 'Post',
   type: 'document',
+  groups: [
+    {
+      title: 'seo',
+      name: 'seo',
+    },
+  ],
   fields: [
     defineField({
       name: 'title',
@@ -13,7 +19,7 @@ export const postType = defineType({
     defineField({
       name: 'slug',
       type: 'slug',
-      options: {source: 'title'},
+      options: { source: 'title' },
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -30,12 +36,18 @@ export const postType = defineType({
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'category'}]}],
+      of: [{ type: 'reference', to: [{ type: 'category' }] }],
     }),
     defineField({
       name: 'body',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [{ type: 'block' }],
+    }),
+    defineField({
+      name: 'seo',
+      title: 'seo',
+      type: 'seo',
+      group: 'seo',
     }),
   ],
 })
