@@ -14,6 +14,8 @@ export const homepage = defineType({
             fields: [
                 { type: 'string', name: 'title' },
                 { type: 'string', name: 'text' },
+                { type: 'boolean', name: 'showButton' },
+                { type: 'string', name: 'buttonLabel' },
                 {
                     name: 'stats',
                     type: 'array',
