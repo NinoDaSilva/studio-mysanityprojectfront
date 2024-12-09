@@ -1,6 +1,7 @@
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
+import { singletonTools } from 'sanity-plugin-singleton-tools'
 import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
@@ -10,7 +11,7 @@ export default defineConfig({
   projectId: '4hf66nwd',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [structureTool(), visionTool(), singletonTools()],
 
   schema: {
     types: schemaTypes,
