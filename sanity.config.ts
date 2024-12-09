@@ -6,7 +6,6 @@ import {
   singletonDocumentListItems,
   filteredDocumentListItems,
 } from 'sanity-plugin-singleton-tools';
-import { PlugIcon } from '@sanity/icons';
 import { schemaTypes } from './schemaTypes'
 
 export default defineConfig({

@@ -2,16 +2,12 @@ import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export const homepage = defineType({
     name: 'homepage',
-    title: 'homepage',
+    title: 'Homepage',
     type: 'document',
     options: {
         singleton: true
     },
     fields: [
-        defineField({
-            name: 'title',
-            type: 'string',
-        }),
         defineField({
             type: 'object',
             name: 'hero',
