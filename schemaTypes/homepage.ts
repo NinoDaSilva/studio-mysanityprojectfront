@@ -56,5 +56,37 @@ export const homepage = defineType({
                 }
             ]
         }),
+        defineField({
+            type: 'object',
+            name: 'pricing',
+            fields: [
+                { type: 'string', name: 'title' },
+                { type: 'string', name: 'text' },
+                { type: 'string', name: 'buttonLabel' },
+                {
+                    name: 'offers',
+                    type: 'array',
+                    title: 'Offers',
+                    of: [
+                        defineArrayMember({
+                            type: 'object',
+                            name: 'price',
+                            fields: [
+                                { type: 'string', name: 'title' },
+                                { type: 'number', name: 'price' },
+                                { 
+                                    type: 'array', 
+                                    name: 'content',
+                                    title: 'Content',
+                                    of : [
+                                        { type: 'string', name: 'feature'}
+                                    ]
+                                },
+                            ]
+                        }),
+                    ]
+                }
+            ]
+        })
     ]
 })
