@@ -16,6 +16,7 @@ export const homepage = defineType({
                 { type: 'string', name: 'text' },
                 { type: 'boolean', name: 'showButton' },
                 { type: 'string', name: 'buttonLabel' },
+                { type: 'image', name: 'backgroundImg' },
                 {
                     name: 'stats',
                     type: 'array',
@@ -32,6 +33,28 @@ export const homepage = defineType({
                     ]
                 }
             ]
-        })
+        }),
+        defineField({
+            type: 'object',
+            name: 'features',
+            fields: [
+                {
+                    name: 'feature',
+                    type: 'array',
+                    title: 'Feature of app',
+                    of: [
+                        defineArrayMember({
+                            type: 'object',
+                            name: 'feature',
+                            fields: [
+                                { type: 'image', name: 'icon' },
+                                { type: 'string', name: 'title' },
+                                { type: 'string', name: 'description' },
+                            ]
+                        }),
+                    ]
+                }
+            ]
+        }),
     ]
 })
