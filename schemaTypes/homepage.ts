@@ -36,10 +36,12 @@ export const homepage = defineType({
         }),
         defineField({
             type: 'object',
-            name: 'features',
+            name: 'functionality',
             fields: [
+                { type: 'string', name: 'title' },
+                { type: 'string', name: 'text' },
                 {
-                    name: 'feature',
+                    name: 'features',
                     type: 'array',
                     title: 'Feature of app',
                     of: [
