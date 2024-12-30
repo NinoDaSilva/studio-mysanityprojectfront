@@ -87,6 +87,30 @@ export const homepage = defineType({
                     ]
                 }
             ]
+        }),
+        defineField({
+            type: 'object',
+            name: 'client',
+            fields: [
+                { type: 'string', name: 'title' },
+                { type: 'string', name: 'text' },
+                {
+                    name: 'comment',
+                    type: 'array',
+                    title: 'Comment',
+                    of: [
+                        defineArrayMember({
+                            type: 'object',
+                            name: 'comment',
+                            fields: [
+                                { type: 'string', name: 'text' },
+                                { type: 'string', name: 'name' },
+                                { type: 'string', name: 'work' },
+                            ]
+                        }),
+                    ]
+                }
+            ]
         })
     ]
 })
