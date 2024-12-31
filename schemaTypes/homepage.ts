@@ -16,6 +16,7 @@ export const homepage = defineType({
                 { type: 'string', name: 'text' },
                 { type: 'boolean', name: 'showButton' },
                 { type: 'string', name: 'buttonLabel' },
+                { type: 'string', name: 'buttonLink' },
                 { type: 'image', name: 'backgroundImg' },
                 {
                     name: 'stats',
